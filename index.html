@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lynx Sport Club | Oficial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lora&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Lora', serif;
+  color:white;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* 🔥 Fondo difuminado con efecto de zoom */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('fondo lynx.jpeg') center/cover no-repeat;
+  
+  /* Aplicamos el desenfoque */
+  filter: blur(6px); 
+  
+  /* El zoom: un valor de 1.1 o 1.2 es ideal para que el blur 
+     no "muerda" los bordes de la pantalla */
+  transform: scale(1.2); 
+  
+  z-index: -1;
+  /* Evita que el zoom cree barras de scroll laterales */
+  pointer-events: none; 
+}
+
+/* Aseguramos que el body no tenga desbordamiento por el zoom del fondo */
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+  background: black; /* Color de respaldo */
+  overflow-x: hidden; 
+}
+
+h1,h2,h3 {font-family:'Oswald', sans-serif;}
+
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h1 {font-size:4rem;}
+.hero span {color:#01ffb3;}
+
+.btn {
+  background:#01ffb3;
+  padding:12px 25px;
+  text-decoration:none;
+  color:rgb(0, 0, 0);
+  display:inline-block;
+  margin-top:20px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+section {
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:rgba(0,0,0,0.6);
+  padding:20px;
+  border-radius:10px;
+  backdrop-filter: blur(5px);
+}
+
+/* FORMULARIO */
+#inscripcion input,
+#inscripcion select,
+#inscripcion textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+.check-group {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.8);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Lynx <span>Sport Club</span></h1>
+    <p>Disciplina · Pasión · Competencia</p>
+    <a href="#equipo" class="btn">Ver categorías</a>
+    <a href="#inscripcion" class="btn">inscripcion</a>
+  </div>
+</div>
+
+<!-- NOSOTROS -->
+<section>
+  <h2>Sobre Nosotros</h2>
+  <p>
+    Para que esa sección tenga un impacto más profesional y genere mayor autoridad, podemos pulir la redacción, corregir la concordancia y resaltar los logros de los entrenadores.
+
+Aquí tienes tres opciones según el estilo que quieras darle a Lynx Sport Club:
+
+Opción 1: Profesional y Directa (Ideal para transmitir confianza)
+Sobre Nosotros
+"En Lynx Sport Club nos dedicamos a la formación integral de atletas con mentalidad ganadora. Con 3 años de trayectoria, nuestro enfoque combina el desarrollo de habilidades técnicas y físicas con el fomento de valores fundamentales. Contamos con un cuerpo técnico especializado, con acreditación Nacional I y II, respaldado por una amplia experiencia en campeonatos distritales, regionales y nacionales, garantizando una preparación de élite para cada uno de nuestros competidores."
+  </p>
+</section>
+
+<!-- CATEGORÍAS -->
+<section id="equipo">
+  <h2>Categorías</h2>
+
+  <div class="grid">
+    <div class="card"><h3>U19</h3><p> "El inicio del camino. En esta etapa priorizamos el desarrollo de la coordinación motriz, la agilidad y el juego creativo. Buscamos que los más pequeños se diviertan mientras aprenden los valores del club y descubren sus primeras habilidades con el balón en un ambiente seguro y motivador."</p></div>
+    <div class="card"><h3>U11</h3><p>Iniciación deportiva:"Transición hacia el perfeccionamiento. En esta etapa, el jugador profundiza en los fundamentos técnicos específicos y comienza a comprender los roles tácticos en el campo, construyendo una base sólida para la competencia juvenil."</p></div>
+    <div class="card"><h3>U15</h3><p>Desarrollo técnico:"Transición hacia el perfeccionamiento. En esta etapa, el jugador profundiza en los fundamentos técnicos específicos y comienza a comprender los roles tácticos en el campo, construyendo una base sólida para la competencia juvenil."</p></div>
+    <div class="card"><h3>U17</h3><p>Competencia:"Preparación para el alto nivel. Aquí el enfoque se traslada a la estrategia de juego avanzada, la resistencia física bajo presión y la mentalidad ganadora, preparando a los atletas para enfrentar desafíos en ligas y torneos oficiales."</p></div>
+    <div class="card"><h3>Mayores</h3><p>Alto rendimiento:"La máxima expresión del juego. Dirigido a deportistas que buscan excelencia y resultados. Entrenamiento de intensidad profesional, análisis táctico detallado y optimización del rendimiento físico para dominar en cada encuentro."</p></div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section>
+  <h2>Entrenamiento</h2>
+  <div class="grid">
+    <div class="card"><h3>🏐 Técnica y fundamentos deportivos</h3><p>"La técnica es el pilar sobre el que se construye tu talento. Nuestro entrenamiento se enfoca en perfeccionar tus movimientos básicos y avanzados para ganar control, precisión y eficiencia en cada acción. Dominar la técnica no es solo jugar mejor; es reducir el riesgo de lesiones, conservar energía y ejecutar con confianza cuando más importa.</p></div>
+    <div class="card"><h3>💪 Fortaleza y Resiliencia</h3><p>"Prepara tu cuerpo para las exigencias del alto nivel. Mediante programas personalizados de fuerza, agilidad y movilidad, optimizamos tu capacidad física para que seas más rápido, más fuerte y más resistente ante cualquier desafío."</p></div>
+    <div class="card"><h3>🏆 Desafío y Competición</h3><p>"La cancha es el examen final. Brindamos a nuestros atletas la oportunidad de competir en eventos locales y nacionales, midiendo su progreso frente a los mejores. Vive la experiencia de la competencia real y lleva tu juego al siguiente nivel."</p></div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section>
+  <h2>Galería</h2>
+  <div class="grid">
+    <img src="u17 (1).jpeg" style="width:100%; border-radius:10px;">
+    <img src="u17 varones.jpeg" style="width:100%; border-radius:10px;">
+    <img src="u9.jpeg" style="width:100%; border-radius:10px;">
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section id="inscripcion">
+  <h2>Inscripción</h2>
+
+  <div class="card">
+    <form>
+
+      <label>Nombre</label>
+      <input type="text" id="nombre">
+
+      <label>Edad</label>
+      <input type="number" id="edad">
+
+      <label>Categoría</label>
+      <select id="categoria">
+        <option>U9</option>
+        <option>U11</option>
+        <option>U15</option>
+        <option>U17</option>
+        <option>U18</option>
+        <option>U19</option>
+        <option>Mayores</option>
+      </select>
+
+      <label>Turno</label>
+      <select id="horario">
+        <option>5:30 pm - 7:30 pm</option>
+        <option>7:30 pm - 9:00 pm</option>
+      </select>
+
+      <label>Días</label>
+      <div class="check-group">
+        <label><input type="checkbox" value="Lunes"> lunes-miercoles-viernes</label>
+              </div>
+
+      <label>Nivel</label>
+      <select id="experiencia">
+        <option>Principiante</option>
+        <option>Intermedio</option>
+        <option>Avanzado</option>
+      </select>
+
+      <button type="button" onclick="enviarFormulario()" class="btn">
+        Enviar por WhatsApp
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section>
+  <h2>Contacto</h2>
+  <p>📞 958 596 986</p>
+  <p>📍 Arequipa, Perú</p>
+</section>
+
+<footer>
+  <p>© 2026 Lynx Sport Club</p>
+</footer>
+
+<script>
+function enviarFormulario() {
+  var nombre = document.getElementById("nombre").value;
+  var edad = document.getElementById("edad").value;
+  var categoria = document.getElementById("categoria").value;
+  var horario = document.getElementById("horario").value;
+  var experiencia = document.getElementById("experiencia").value;
+
+  var dias = [];
+  document.querySelectorAll('.check-group input:checked').forEach(el => {
+    dias.push(el.value);
+  });
+
+  var mensaje =
+  "INSCRIPCIÓN LYNX%0A" +
+  "Nombre: " + nombre + "%0A" +
+  "Edad: " + edad + "%0A" +
+  "Categoría: " + categoria + "%0A" +
+  "Turno: " + horario + "%0A" +
+  "Días: " + dias.join(", ") + "%0A" +
+  "Nivel: " + experiencia;
+
+  var url = "https://wa.me/51958596986?text=" + mensaje;
+  window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
